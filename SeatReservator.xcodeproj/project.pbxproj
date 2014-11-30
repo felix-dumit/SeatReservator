@@ -1,0 +1,681 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD1D8E6318284641BB585CC4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A683291B1A2847B49968F8C8 /* libPods.a */; };
+		D5028CA919CE28050012BF6C /* SeatRowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5028CA819CE28050012BF6C /* SeatRowTableViewCell.m */; };
+		D544877519CB850700DC496B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D544877419CB850700DC496B /* main.m */; };
+		D544877819CB850700DC496B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D544877719CB850700DC496B /* AppDelegate.m */; };
+		D544877B19CB850700DC496B /* FlightEditSeatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D544877A19CB850700DC496B /* FlightEditSeatsViewController.m */; };
+		D544878019CB850700DC496B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D544877F19CB850700DC496B /* Images.xcassets */; };
+		D544878319CB850700DC496B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D544878119CB850700DC496B /* LaunchScreen.xib */; };
+		D544878F19CB850700DC496B /* SeatReservatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D544878E19CB850700DC496B /* SeatReservatorTests.m */; };
+		D544879A19CB852A00DC496B /* AirportFlipLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D544879919CB852A00DC496B /* AirportFlipLabel.m */; };
+		D544879C19CB853400DC496B /* flipflap.aiff in Resources */ = {isa = PBXBuildFile; fileRef = D544879B19CB853400DC496B /* flipflap.aiff */; };
+		D54487A019CB875000DC496B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D544879E19CB875000DC496B /* Main.storyboard */; };
+		D58206A719CE8497008225CB /* Seat.m in Sources */ = {isa = PBXBuildFile; fileRef = D58206A619CE8497008225CB /* Seat.m */; };
+		D58206AA19CE924A008225CB /* FlightsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D58206A919CE924A008225CB /* FlightsTableViewController.m */; };
+		D5B5130A19CD54A400392C9F /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B5130919CD54A400392C9F /* libc++.1.dylib */; };
+		D5BCDC4E19CF7E21009F865F /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BCDC4D19CF7E21009F865F /* CustomIOS7AlertView.m */; };
+		D5BCDC5A19CFB644009F865F /* icon-error.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BCDC5219CFB644009F865F /* icon-error.png */; };
+		D5BCDC5B19CFB644009F865F /* icon-error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BCDC5319CFB644009F865F /* icon-error@2x.png */; };
+		D5BCDC5C19CFB644009F865F /* icon-info.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BCDC5419CFB644009F865F /* icon-info.png */; };
+		D5BCDC5D19CFB644009F865F /* icon-info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BCDC5519CFB644009F865F /* icon-info@2x.png */; };
+		D5BCDC5E19CFB644009F865F /* icon-success.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BCDC5619CFB644009F865F /* icon-success.png */; };
+		D5BCDC5F19CFB644009F865F /* icon-success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BCDC5719CFB644009F865F /* icon-success@2x.png */; };
+		D5BCDC6019CFB644009F865F /* TWMessageBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BCDC5919CFB644009F865F /* TWMessageBarManager.m */; };
+		D5BCDC6D19CFC9A8009F865F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5BCDC6C19CFC9A8009F865F /* AVFoundation.framework */; };
+		D5BCDC6F19CFC9AE009F865F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5BCDC6E19CFC9AE009F865F /* UIKit.framework */; };
+		D5BCDC7119CFC9B4009F865F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5BCDC7019CFC9B4009F865F /* Foundation.framework */; };
+		D5D5D33719CE500000B796DD /* SeatRow.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D5D33619CE500000B796DD /* SeatRow.m */; };
+		D5D5D33A19CE514A00B796DD /* Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D5D33919CE514A00B796DD /* Flight.m */; };
+		D5ED864319CF6B6700AB3C17 /* FlightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5ED864219CF6B6700AB3C17 /* FlightTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D544878919CB850700DC496B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D544876719CB850600DC496B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D544876E19CB850700DC496B;
+			remoteInfo = SeatReservator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21B650AF69BE3485D30DBC7D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		294A32F9596A20BF5E013684 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A683291B1A2847B49968F8C8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5028CA719CE28050012BF6C /* SeatRowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeatRowTableViewCell.h; sourceTree = "<group>"; };
+		D5028CA819CE28050012BF6C /* SeatRowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeatRowTableViewCell.m; sourceTree = "<group>"; };
+		D544876F19CB850700DC496B /* SeatReservator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeatReservator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D544877319CB850700DC496B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D544877419CB850700DC496B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D544877619CB850700DC496B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D544877719CB850700DC496B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D544877919CB850700DC496B /* FlightEditSeatsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlightEditSeatsViewController.h; sourceTree = "<group>"; };
+		D544877A19CB850700DC496B /* FlightEditSeatsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlightEditSeatsViewController.m; sourceTree = "<group>"; };
+		D544877F19CB850700DC496B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D544878219CB850700DC496B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D544878819CB850700DC496B /* SeatReservatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeatReservatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D544878D19CB850700DC496B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D544878E19CB850700DC496B /* SeatReservatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeatReservatorTests.m; sourceTree = "<group>"; };
+		D544879819CB852A00DC496B /* AirportFlipLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirportFlipLabel.h; sourceTree = "<group>"; };
+		D544879919CB852A00DC496B /* AirportFlipLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirportFlipLabel.m; sourceTree = "<group>"; };
+		D544879B19CB853400DC496B /* flipflap.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = flipflap.aiff; sourceTree = "<group>"; };
+		D544879F19CB875000DC496B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D58206A519CE8497008225CB /* Seat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seat.h; sourceTree = "<group>"; };
+		D58206A619CE8497008225CB /* Seat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seat.m; sourceTree = "<group>"; };
+		D58206A819CE924A008225CB /* FlightsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightsTableViewController.h; sourceTree = "<group>"; };
+		D58206A919CE924A008225CB /* FlightsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightsTableViewController.m; sourceTree = "<group>"; };
+		D5B5130919CD54A400392C9F /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "usr/lib/libc++.1.dylib"; sourceTree = SDKROOT; };
+		D5BCDC4C19CF7E21009F865F /* CustomIOS7AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIOS7AlertView.h; sourceTree = "<group>"; };
+		D5BCDC4D19CF7E21009F865F /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
+		D5BCDC5219CFB644009F865F /* icon-error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-error.png"; sourceTree = "<group>"; };
+		D5BCDC5319CFB644009F865F /* icon-error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-error@2x.png"; sourceTree = "<group>"; };
+		D5BCDC5419CFB644009F865F /* icon-info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-info.png"; sourceTree = "<group>"; };
+		D5BCDC5519CFB644009F865F /* icon-info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-info@2x.png"; sourceTree = "<group>"; };
+		D5BCDC5619CFB644009F865F /* icon-success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-success.png"; sourceTree = "<group>"; };
+		D5BCDC5719CFB644009F865F /* icon-success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-success@2x.png"; sourceTree = "<group>"; };
+		D5BCDC5819CFB644009F865F /* TWMessageBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMessageBarManager.h; sourceTree = "<group>"; };
+		D5BCDC5919CFB644009F865F /* TWMessageBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWMessageBarManager.m; sourceTree = "<group>"; };
+		D5BCDC6C19CFC9A8009F865F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D5BCDC6E19CFC9AE009F865F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D5BCDC7019CFC9B4009F865F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D5D5D33519CE500000B796DD /* SeatRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeatRow.h; sourceTree = "<group>"; };
+		D5D5D33619CE500000B796DD /* SeatRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeatRow.m; sourceTree = "<group>"; };
+		D5D5D33819CE514A00B796DD /* Flight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flight.h; sourceTree = "<group>"; };
+		D5D5D33919CE514A00B796DD /* Flight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flight.m; sourceTree = "<group>"; };
+		D5ED864119CF6B6700AB3C17 /* FlightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightTableViewCell.h; sourceTree = "<group>"; };
+		D5ED864219CF6B6700AB3C17 /* FlightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D544876C19CB850700DC496B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5BCDC7119CFC9B4009F865F /* Foundation.framework in Frameworks */,
+				D5BCDC6F19CFC9AE009F865F /* UIKit.framework in Frameworks */,
+				D5BCDC6D19CFC9A8009F865F /* AVFoundation.framework in Frameworks */,
+				D5B5130A19CD54A400392C9F /* libc++.1.dylib in Frameworks */,
+				CD1D8E6318284641BB585CC4 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D544878519CB850700DC496B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C78EAD39D8673D87058A1518 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				294A32F9596A20BF5E013684 /* Pods.debug.xcconfig */,
+				21B650AF69BE3485D30DBC7D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D5028CAA19CE2A900012BF6C /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				D5ED864119CF6B6700AB3C17 /* FlightTableViewCell.h */,
+				D5ED864219CF6B6700AB3C17 /* FlightTableViewCell.m */,
+				D5028CA719CE28050012BF6C /* SeatRowTableViewCell.h */,
+				D5028CA819CE28050012BF6C /* SeatRowTableViewCell.m */,
+			);
+			name = TableCells;
+			sourceTree = "<group>";
+		};
+		D544876619CB850600DC496B = {
+			isa = PBXGroup;
+			children = (
+				D544877119CB850700DC496B /* SeatReservator */,
+				D544878B19CB850700DC496B /* SeatReservatorTests */,
+				D544877019CB850700DC496B /* Products */,
+				DDAF53338B714C34B05D4A5E /* Frameworks */,
+				C78EAD39D8673D87058A1518 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		D544877019CB850700DC496B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D544876F19CB850700DC496B /* SeatReservator.app */,
+				D544878819CB850700DC496B /* SeatReservatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D544877119CB850700DC496B /* SeatReservator */ = {
+			isa = PBXGroup;
+			children = (
+				D544877619CB850700DC496B /* AppDelegate.h */,
+				D544877719CB850700DC496B /* AppDelegate.m */,
+				D5D5D33419CE4FEC00B796DD /* Model */,
+				D5A6C2FC19CCA849001FE196 /* Views */,
+				D5A6C2FD19CCA857001FE196 /* ViewControllers */,
+				D544877F19CB850700DC496B /* Images.xcassets */,
+				D5B5130819CD547A00392C9F /* Frameworks */,
+				D544877219CB850700DC496B /* Supporting Files */,
+			);
+			path = SeatReservator;
+			sourceTree = "<group>";
+		};
+		D544877219CB850700DC496B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D544877319CB850700DC496B /* Info.plist */,
+				D544877419CB850700DC496B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D544878B19CB850700DC496B /* SeatReservatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				D544878E19CB850700DC496B /* SeatReservatorTests.m */,
+				D544878C19CB850700DC496B /* Supporting Files */,
+			);
+			path = SeatReservatorTests;
+			sourceTree = "<group>";
+		};
+		D544878C19CB850700DC496B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D544878D19CB850700DC496B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D544879D19CB853D00DC496B /* AirportFlipLabel */ = {
+			isa = PBXGroup;
+			children = (
+				D54487A119CB8BC900DC496B /* media */,
+				D544879819CB852A00DC496B /* AirportFlipLabel.h */,
+				D544879919CB852A00DC496B /* AirportFlipLabel.m */,
+			);
+			name = AirportFlipLabel;
+			sourceTree = "<group>";
+		};
+		D54487A119CB8BC900DC496B /* media */ = {
+			isa = PBXGroup;
+			children = (
+				D544879B19CB853400DC496B /* flipflap.aiff */,
+			);
+			name = media;
+			sourceTree = "<group>";
+		};
+		D5A6C2FC19CCA849001FE196 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5BCDC5019CFB644009F865F /* TWMessageBarManager */,
+				D5BCDC4F19CF7E26009F865F /* CustomAlertView */,
+				D544879D19CB853D00DC496B /* AirportFlipLabel */,
+				D5028CAA19CE2A900012BF6C /* TableCells */,
+				D544878119CB850700DC496B /* LaunchScreen.xib */,
+				D544879E19CB875000DC496B /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D5A6C2FD19CCA857001FE196 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D58206A819CE924A008225CB /* FlightsTableViewController.h */,
+				D58206A919CE924A008225CB /* FlightsTableViewController.m */,
+				D544877919CB850700DC496B /* FlightEditSeatsViewController.h */,
+				D544877A19CB850700DC496B /* FlightEditSeatsViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D5B5130819CD547A00392C9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5BCDC7019CFC9B4009F865F /* Foundation.framework */,
+				D5BCDC6E19CFC9AE009F865F /* UIKit.framework */,
+				D5BCDC6C19CFC9A8009F865F /* AVFoundation.framework */,
+				D5B5130919CD54A400392C9F /* libc++.1.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5BCDC4F19CF7E26009F865F /* CustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				D5BCDC4C19CF7E21009F865F /* CustomIOS7AlertView.h */,
+				D5BCDC4D19CF7E21009F865F /* CustomIOS7AlertView.m */,
+			);
+			name = CustomAlertView;
+			sourceTree = "<group>";
+		};
+		D5BCDC5019CFB644009F865F /* TWMessageBarManager */ = {
+			isa = PBXGroup;
+			children = (
+				D5BCDC5119CFB644009F865F /* Icons */,
+				D5BCDC5819CFB644009F865F /* TWMessageBarManager.h */,
+				D5BCDC5919CFB644009F865F /* TWMessageBarManager.m */,
+			);
+			name = TWMessageBarManager;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D5BCDC5119CFB644009F865F /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				D5BCDC5219CFB644009F865F /* icon-error.png */,
+				D5BCDC5319CFB644009F865F /* icon-error@2x.png */,
+				D5BCDC5419CFB644009F865F /* icon-info.png */,
+				D5BCDC5519CFB644009F865F /* icon-info@2x.png */,
+				D5BCDC5619CFB644009F865F /* icon-success.png */,
+				D5BCDC5719CFB644009F865F /* icon-success@2x.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		D5D5D33419CE4FEC00B796DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D58206A519CE8497008225CB /* Seat.h */,
+				D58206A619CE8497008225CB /* Seat.m */,
+				D5D5D33519CE500000B796DD /* SeatRow.h */,
+				D5D5D33619CE500000B796DD /* SeatRow.m */,
+				D5D5D33819CE514A00B796DD /* Flight.h */,
+				D5D5D33919CE514A00B796DD /* Flight.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DDAF53338B714C34B05D4A5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A683291B1A2847B49968F8C8 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D544876E19CB850700DC496B /* SeatReservator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D544879219CB850700DC496B /* Build configuration list for PBXNativeTarget "SeatReservator" */;
+			buildPhases = (
+				AFEA5F9E57E542FDB9D5E113 /* Check Pods Manifest.lock */,
+				D544876B19CB850700DC496B /* Sources */,
+				D544876C19CB850700DC496B /* Frameworks */,
+				D544876D19CB850700DC496B /* Resources */,
+				AFEC19E8AEA34C63A95B8A4E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SeatReservator;
+			productName = SeatReservator;
+			productReference = D544876F19CB850700DC496B /* SeatReservator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D544878719CB850700DC496B /* SeatReservatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D544879519CB850700DC496B /* Build configuration list for PBXNativeTarget "SeatReservatorTests" */;
+			buildPhases = (
+				D544878419CB850700DC496B /* Sources */,
+				D544878519CB850700DC496B /* Frameworks */,
+				D544878619CB850700DC496B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D544878A19CB850700DC496B /* PBXTargetDependency */,
+			);
+			name = SeatReservatorTests;
+			productName = SeatReservatorTests;
+			productReference = D544878819CB850700DC496B /* SeatReservatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D544876719CB850600DC496B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Felix Dumit";
+				TargetAttributes = {
+					D544876E19CB850700DC496B = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					D544878719CB850700DC496B = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = D544876E19CB850700DC496B;
+					};
+				};
+			};
+			buildConfigurationList = D544876A19CB850600DC496B /* Build configuration list for PBXProject "SeatReservator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D544876619CB850600DC496B;
+			productRefGroup = D544877019CB850700DC496B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D544876E19CB850700DC496B /* SeatReservator */,
+				D544878719CB850700DC496B /* SeatReservatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D544876D19CB850700DC496B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D544878319CB850700DC496B /* LaunchScreen.xib in Resources */,
+				D5BCDC5C19CFB644009F865F /* icon-info.png in Resources */,
+				D5BCDC5E19CFB644009F865F /* icon-success.png in Resources */,
+				D544878019CB850700DC496B /* Images.xcassets in Resources */,
+				D5BCDC5B19CFB644009F865F /* icon-error@2x.png in Resources */,
+				D5BCDC5F19CFB644009F865F /* icon-success@2x.png in Resources */,
+				D544879C19CB853400DC496B /* flipflap.aiff in Resources */,
+				D54487A019CB875000DC496B /* Main.storyboard in Resources */,
+				D5BCDC5A19CFB644009F865F /* icon-error.png in Resources */,
+				D5BCDC5D19CFB644009F865F /* icon-info@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D544878619CB850700DC496B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AFEA5F9E57E542FDB9D5E113 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AFEC19E8AEA34C63A95B8A4E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D544876B19CB850700DC496B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5BCDC6019CFB644009F865F /* TWMessageBarManager.m in Sources */,
+				D58206A719CE8497008225CB /* Seat.m in Sources */,
+				D544877B19CB850700DC496B /* FlightEditSeatsViewController.m in Sources */,
+				D544879A19CB852A00DC496B /* AirportFlipLabel.m in Sources */,
+				D5028CA919CE28050012BF6C /* SeatRowTableViewCell.m in Sources */,
+				D58206AA19CE924A008225CB /* FlightsTableViewController.m in Sources */,
+				D544877819CB850700DC496B /* AppDelegate.m in Sources */,
+				D5D5D33719CE500000B796DD /* SeatRow.m in Sources */,
+				D544877519CB850700DC496B /* main.m in Sources */,
+				D5D5D33A19CE514A00B796DD /* Flight.m in Sources */,
+				D5BCDC4E19CF7E21009F865F /* CustomIOS7AlertView.m in Sources */,
+				D5ED864319CF6B6700AB3C17 /* FlightTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D544878419CB850700DC496B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D544878F19CB850700DC496B /* SeatReservatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D544878A19CB850700DC496B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D544876E19CB850700DC496B /* SeatReservator */;
+			targetProxy = D544878919CB850700DC496B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D544878119CB850700DC496B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D544878219CB850700DC496B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		D544879E19CB875000DC496B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D544879F19CB875000DC496B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D544879019CB850700DC496B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D544879119CB850700DC496B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D544879319CB850700DC496B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 294A32F9596A20BF5E013684 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SeatReservator",
+				);
+				INFOPLIST_FILE = SeatReservator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D544879419CB850700DC496B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21B650AF69BE3485D30DBC7D /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SeatReservator",
+				);
+				INFOPLIST_FILE = SeatReservator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D544879619CB850700DC496B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SeatReservatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeatReservator.app/SeatReservator";
+			};
+			name = Debug;
+		};
+		D544879719CB850700DC496B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SeatReservatorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeatReservator.app/SeatReservator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D544876A19CB850600DC496B /* Build configuration list for PBXProject "SeatReservator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D544879019CB850700DC496B /* Debug */,
+				D544879119CB850700DC496B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D544879219CB850700DC496B /* Build configuration list for PBXNativeTarget "SeatReservator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D544879319CB850700DC496B /* Debug */,
+				D544879419CB850700DC496B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D544879519CB850700DC496B /* Build configuration list for PBXNativeTarget "SeatReservatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D544879619CB850700DC496B /* Debug */,
+				D544879719CB850700DC496B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D544876719CB850600DC496B /* Project object */;
+}

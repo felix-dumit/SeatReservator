@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IxL-P5-Hnb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Flight Edit Seats View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="FlightEditSeatsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Avo-Ru-2bw">
+                                <rect key="frame" x="182" y="69" width="236" height="29"/>
+                                <segments>
+                                    <segment title="First Class"/>
+                                    <segment title="Business"/>
+                                    <segment title="Economy"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segmentedControlChangedSection:" destination="vXZ-lx-hvc" eventType="valueChanged" id="X5E-OE-o1T"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="sOx-C6-JjO">
+                                <rect key="frame" x="0.0" y="102" width="600" height="454"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="firstRowCell" rowHeight="160" id="h67-ZT-QeV" userLabel="seatRowCell - First" customClass="SeatRowTableViewCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h67-ZT-QeV" id="1RV-Vc-tEr">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecu-v6-sQO">
+                                                    <rect key="frame" x="276" y="66" width="48.5" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TEN-UQ-xuq">
+                                                    <rect key="frame" x="18" y="34" width="141" height="113"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfC-Nx-0aF">
+                                                            <rect key="frame" x="3" y="-9" width="144" height="110"/>
+                                                            <state key="normal" image="firstClassAvailable1">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kud-s2-EH4">
+                                                            <rect key="frame" x="69" y="57" width="12" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="113" id="0tw-hi-MyZ"/>
+                                                        <constraint firstAttribute="width" constant="141" id="xPr-AQ-c3g"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C12-sd-7rt">
+                                                    <rect key="frame" x="441" y="21" width="141" height="113"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSL-0M-cqt">
+                                                            <rect key="frame" x="1" y="2" width="144" height="110"/>
+                                                            <state key="normal" image="firstClassTaken2">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDb-Xc-aLt">
+                                                            <rect key="frame" x="67" y="69" width="12" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="141" id="hXE-QY-ZAF"/>
+                                                        <constraint firstAttribute="height" constant="113" id="l4H-9P-zfW"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TEN-UQ-xuq" firstAttribute="leading" secondItem="1RV-Vc-tEr" secondAttribute="leadingMargin" constant="10" id="0Ib-S8-fzg"/>
+                                                <constraint firstItem="C12-sd-7rt" firstAttribute="trailing" secondItem="1RV-Vc-tEr" secondAttribute="trailingMargin" constant="-10" id="F1W-yJ-8t8"/>
+                                                <constraint firstAttribute="centerY" secondItem="ecu-v6-sQO" secondAttribute="centerY" constant="1.25" id="M33-EM-5S7"/>
+                                                <constraint firstAttribute="centerX" secondItem="ecu-v6-sQO" secondAttribute="centerX" id="Yld-lo-SJ1"/>
+                                                <constraint firstAttribute="centerY" secondItem="C12-sd-7rt" secondAttribute="centerY" constant="2.5" id="aSD-dZ-sAr"/>
+                                                <constraint firstAttribute="centerY" secondItem="TEN-UQ-xuq" secondAttribute="centerY" constant="-10.5" id="dNU-Kg-4Ux"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="rowLabel" destination="ecu-v6-sQO" id="suN-yO-ig5"/>
+                                            <outletCollection property="seatButtons" destination="QfC-Nx-0aF" id="Dyy-4u-xVg"/>
+                                            <outletCollection property="seatLabels" destination="Kud-s2-EH4" id="S5m-0N-GYL"/>
+                                            <outletCollection property="seatButtons" destination="wSL-0M-cqt" id="1Em-Rs-Jk3"/>
+                                            <outletCollection property="seatLabels" destination="dDb-Xc-aLt" id="AZa-b5-Qwy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="businessRowCell" rowHeight="130" id="Mfm-BV-CNg" userLabel="seatRowCell - Business" customClass="SeatRowTableViewCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mfm-BV-CNg" id="7I0-cF-hLX">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7w-7e-FGZ">
+                                                    <rect key="frame" x="294" y="53" width="11" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wGV-8C-lXU" userLabel="Left Seats">
+                                                    <rect key="frame" x="18" y="15" width="112" height="99"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ot-q2-RjZ" userLabel="Seat A">
+                                                            <rect key="frame" x="-5" y="0.0" width="63" height="99"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GA6-92-vSy" userLabel="Button1">
+                                                                    <rect key="frame" x="-1" y="-1" width="70" height="100"/>
+                                                                    <state key="normal" image="proSeatAvailable">
+                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                    <state key="selected" image="proSeatTaken"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjv-ow-OIw" userLabel="Label1">
+                                                                    <rect key="frame" x="28" y="38" width="12" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ydO-bp-tC2" userLabel="Seat B">
+                                                            <rect key="frame" x="52" y="0.0" width="60" height="99"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWd-V3-oeC" userLabel="Button1">
+                                                                    <rect key="frame" x="-1" y="-1" width="70" height="100"/>
+                                                                    <state key="normal" image="proSeatTaken">
+                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                    <state key="selected" image="proSeatAvailable"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSU-7v-5mi" userLabel="Label1">
+                                                                    <rect key="frame" x="28" y="38" width="12" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="112" id="lKS-uJ-pLq"/>
+                                                        <constraint firstAttribute="height" constant="99" id="zoM-lo-Ccz"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNv-Gy-su2" userLabel="Right Seats">
+                                                    <rect key="frame" x="470" y="15" width="112" height="99"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqU-Yq-kmn" userLabel="Seat A">
+                                                            <rect key="frame" x="-5" y="0.0" width="63" height="99"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6i-eA-SfT" userLabel="Button1">
+                                                                    <rect key="frame" x="-1" y="-1" width="70" height="100"/>
+                                                                    <state key="normal" image="proSeatAvailable">
+                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                    <state key="selected" image="proSeatTaken"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKz-PU-RlH" userLabel="Label1">
+                                                                    <rect key="frame" x="28" y="38" width="13" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TpJ-vN-bHl" userLabel="Seat B">
+                                                            <rect key="frame" x="52" y="0.0" width="60" height="99"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfd-z5-1zn" userLabel="Button1">
+                                                                    <rect key="frame" x="-1" y="-1" width="70" height="100"/>
+                                                                    <state key="normal" image="proSeatAvailable">
+                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                    <state key="selected" image="proSeatTaken"/>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="D" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pud-He-79f" userLabel="Label1">
+                                                                    <rect key="frame" x="28" y="38" width="13" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="112" id="3Gb-6h-8nc"/>
+                                                        <constraint firstAttribute="height" constant="99" id="5TE-j4-u6Y"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="cNv-Gy-su2" secondAttribute="trailing" constant="10" id="3QR-Ni-NiB"/>
+                                                <constraint firstItem="wGV-8C-lXU" firstAttribute="leading" secondItem="7I0-cF-hLX" secondAttribute="leadingMargin" constant="10" id="9gp-eV-a9M"/>
+                                                <constraint firstAttribute="centerY" secondItem="cNv-Gy-su2" secondAttribute="centerY" constant="0.5" id="BHB-uO-BTx"/>
+                                                <constraint firstAttribute="centerY" secondItem="p7w-7e-FGZ" secondAttribute="centerY" id="UuI-YL-c3p"/>
+                                                <constraint firstAttribute="centerX" secondItem="p7w-7e-FGZ" secondAttribute="centerX" id="iOX-vI-AeP"/>
+                                                <constraint firstAttribute="centerY" secondItem="wGV-8C-lXU" secondAttribute="centerY" constant="0.5" id="tdg-WR-Vhu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="rowLabel" destination="p7w-7e-FGZ" id="MNV-Qj-7kw"/>
+                                            <outletCollection property="seatButtons" destination="GA6-92-vSy" id="e7e-8g-5aE"/>
+                                            <outletCollection property="seatLabels" destination="Bjv-ow-OIw" id="22l-nh-Oqo"/>
+                                            <outletCollection property="seatButtons" destination="dWd-V3-oeC" id="kwq-fJ-fzV"/>
+                                            <outletCollection property="seatLabels" destination="XSU-7v-5mi" id="Dgb-hL-2JY"/>
+                                            <outletCollection property="seatButtons" destination="f6i-eA-SfT" id="mNN-xk-tG3"/>
+                                            <outletCollection property="seatLabels" destination="aKz-PU-RlH" id="2EE-Bg-Ldc"/>
+                                            <outletCollection property="seatButtons" destination="bfd-z5-1zn" id="JOg-wc-dzF"/>
+                                            <outletCollection property="seatLabels" destination="pud-He-79f" id="VoQ-Ds-KNd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="economyRowCell" rowHeight="80" id="qCt-y4-eWA" userLabel="seatRowCell - Economy" customClass="SeatRowTableViewCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qCt-y4-eWA" id="ArO-fB-i8j">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7I3-9U-2y8" userLabel="Left Seats">
+                                                    <rect key="frame" x="13" y="8" width="132" height="59.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LNG-tF-94P" userLabel="View A">
+                                                            <rect key="frame" x="1" y="-1" width="50" height="60.5"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqM-Pc-EB3">
+                                                                    <rect key="frame" x="-1" y="-3" width="51" height="63.5"/>
+                                                                    <state key="normal" image="economySeatAvailable">
+                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                    <state key="selected" image="proSeatTaken"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fft-NK-nen">
+                                                                    <rect key="frame" x="19" y="18" width="12" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z63-T9-qVz" userLabel="View B">
+                                                            <rect key="frame" x="42" y="-1" width="50" height="60.5"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoQ-O1-fza">
+                                                                    <rect key="frame" x="-1" y="-3" width="51" height="63.5"/>
+                                                                    <state key="normal" image="economySeatTaken">
+                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQ3-4Y-DcM">
+                                                                    <rect key="frame" x="19" y="17" width="12" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2d-xd-4TH" userLabel="View C">
+                                                            <rect key="frame" x="82" y="-1" width="50" height="60.5"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxK-T6-eYZ">
+                                                                    <rect key="frame" x="-1" y="-3" width="51" height="63.5"/>
+                                                                    <state key="normal" image="economySeatAvailable">
+                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7q-yJ-lBF">
+                                                                    <rect key="frame" x="19" y="18" width="12" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="132" id="FZF-Re-G1B"/>
+                                                        <constraint firstAttribute="height" constant="59.5" id="gKN-Iq-FGQ"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLj-9m-gxf" userLabel="Right Seats">
+                                                    <rect key="frame" x="455" y="11" width="132" height="59.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a4B-1N-rvS" userLabel="View D">
+                                                            <rect key="frame" x="1" y="-1" width="50" height="60.5"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlJ-Ek-arf">
+                                                                    <rect key="frame" x="-1" y="-3" width="51" height="63.5"/>
+                                                                    <state key="normal" image="economySeatAvailable">
+                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwn-Ye-Tve">
+                                                                    <rect key="frame" x="19" y="18" width="12" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAg-Fg-SJK" userLabel="View E">
+                                                            <rect key="frame" x="42" y="-1" width="50" height="60.5"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfq-Gz-6sE">
+                                                                    <rect key="frame" x="-1" y="-3" width="51" height="63.5"/>
+                                                                    <state key="normal" image="economySeatAvailable">
+                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dix-Cq-97K">
+                                                                    <rect key="frame" x="19" y="18" width="12" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jnZ-0p-Axv" userLabel="View F">
+                                                            <rect key="frame" x="82" y="-1" width="50" height="60.5"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChW-rc-0PL">
+                                                                    <rect key="frame" x="-1" y="-3" width="51" height="63.5"/>
+                                                                    <state key="normal" image="economySeatTaken">
+                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44B-U2-bDm">
+                                                                    <rect key="frame" x="19" y="18" width="12" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="132" id="Csx-yM-qdC"/>
+                                                        <constraint firstAttribute="height" constant="59.5" id="gjZ-vI-VW2"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZID-fE-W8G">
+                                                    <rect key="frame" x="276" y="27" width="48.5" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="DLj-9m-gxf" secondAttribute="centerY" constant="-0.5" id="EQA-Je-cFv"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DLj-9m-gxf" secondAttribute="trailing" constant="5" id="NRL-Mu-ewF"/>
+                                                <constraint firstAttribute="centerY" secondItem="ZID-fE-W8G" secondAttribute="centerY" constant="1.25" id="Nc1-AF-fqy"/>
+                                                <constraint firstAttribute="centerX" secondItem="ZID-fE-W8G" secondAttribute="centerX" id="fTz-mL-LEl"/>
+                                                <constraint firstAttribute="centerY" secondItem="7I3-9U-2y8" secondAttribute="centerY" constant="2" id="mgz-3c-oyR"/>
+                                                <constraint firstItem="7I3-9U-2y8" firstAttribute="leading" secondItem="ArO-fB-i8j" secondAttribute="leadingMargin" constant="5" id="vDB-Pg-p3G"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="rowLabel" destination="ZID-fE-W8G" id="nSe-Xw-PKs"/>
+                                            <outletCollection property="seatButtons" destination="sqM-Pc-EB3" id="K64-f3-Dgg"/>
+                                            <outletCollection property="seatLabels" destination="Fft-NK-nen" id="T3S-oF-009"/>
+                                            <outletCollection property="seatButtons" destination="SoQ-O1-fza" id="x3n-ol-TA5"/>
+                                            <outletCollection property="seatLabels" destination="dQ3-4Y-DcM" id="AZP-C9-CCA"/>
+                                            <outletCollection property="seatButtons" destination="sxK-T6-eYZ" id="qGA-VR-Tn6"/>
+                                            <outletCollection property="seatLabels" destination="C7q-yJ-lBF" id="81a-sD-3e7"/>
+                                            <outletCollection property="seatButtons" destination="YlJ-Ek-arf" id="y0b-wJ-2Mh"/>
+                                            <outletCollection property="seatLabels" destination="cwn-Ye-Tve" id="mBL-pt-dLB"/>
+                                            <outletCollection property="seatButtons" destination="wfq-Gz-6sE" id="VzC-x1-Vsd"/>
+                                            <outletCollection property="seatLabels" destination="Dix-Cq-97K" id="F6X-Jh-KWB"/>
+                                            <outletCollection property="seatButtons" destination="ChW-rc-0PL" id="APw-hr-61W"/>
+                                            <outletCollection property="seatLabels" destination="44B-U2-bDm" id="UNa-ac-qa7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="WLI-B5-uiX"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="fTW-9c-HWA"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXt-0V-kND">
+                                <rect key="frame" x="-1" y="278" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="a2G-Zp-Esy"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5a-qK-Hiy">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Selected Seat:" id="2fM-0Y-z5H">
+                                        <connections>
+                                            <action selector="goToSelectedSeat:" destination="vXZ-lx-hvc" id="K7n-iR-zHG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ffU-xG-SPx"/>
+                                    <barButtonItem title="Book" id="Zfm-x2-gCt">
+                                        <color key="tintColor" red="0.45177699119999998" green="1" blue="0.26315873579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="saveSelectedSeat:" destination="vXZ-lx-hvc" id="4RO-LJ-hDH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q5a-qK-Hiy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="0Xa-AO-nIY"/>
+                            <constraint firstItem="sOx-C6-JjO" firstAttribute="top" secondItem="Avo-Ru-2bw" secondAttribute="bottom" constant="5" id="0wi-iT-aa3"/>
+                            <constraint firstItem="Q5a-qK-Hiy" firstAttribute="top" secondItem="sOx-C6-JjO" secondAttribute="bottom" id="34K-D2-YTl"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Q5a-qK-Hiy" secondAttribute="bottom" id="TGO-iT-Y99"/>
+                            <constraint firstItem="Avo-Ru-2bw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="119.5" id="bym-J2-y91"/>
+                            <constraint firstItem="Avo-Ru-2bw" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="5" id="cGr-ho-hzx"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Avo-Ru-2bw" secondAttribute="trailing" id="cfx-Ai-MXN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Avo-Ru-2bw" secondAttribute="trailing" constant="122" id="dCH-vw-W6G"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q5a-qK-Hiy" secondAttribute="trailing" constant="-16" id="doP-vv-dnB"/>
+                            <constraint firstAttribute="centerX" secondItem="Avo-Ru-2bw" secondAttribute="centerX" id="flG-va-dvE"/>
+                            <constraint firstItem="Avo-Ru-2bw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="nMs-LI-q2w"/>
+                            <constraint firstItem="sOx-C6-JjO" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="nc4-wJ-Q6p"/>
+                            <constraint firstAttribute="centerX" secondItem="sOx-C6-JjO" secondAttribute="centerX" id="w4U-n6-Bk0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="oXt-0V-kND"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="bym-J2-y91"/>
+                                <exclude reference="dCH-vw-W6G"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="saveSelectedSeatBarItem" destination="Zfm-x2-gCt" id="6SV-Xh-QBC"/>
+                        <outlet property="sectionSegmentedControl" destination="Avo-Ru-2bw" id="Pxq-IU-7GS"/>
+                        <outlet property="selectedSeatBarItem" destination="2fM-0Y-z5H" id="s9S-gY-Mac"/>
+                        <outlet property="tableView" destination="sOx-C6-JjO" id="lJ7-ae-WJz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1123" y="613"/>
+        </scene>
+        <!--Flights-->
+        <scene sceneID="UOo-qa-JTf">
+            <objects>
+                <tableViewController id="oAK-TS-qZH" customClass="FlightsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="22" sectionFooterHeight="22" id="vYM-J5-9I8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="flightCell" rowHeight="44" id="1rp-wC-yZT" customClass="FlightTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1rp-wC-yZT" id="BUt-F7-EhV">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8F-RR-2k6" customClass="AirportFlipLabel">
+                                            <rect key="frame" x="8" y="16" width="584" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="a8F-RR-2k6" secondAttribute="centerY" constant="-4.75" id="J8e-Ax-0fy"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="a8F-RR-2k6" secondAttribute="trailing" id="NPE-Qu-LbL"/>
+                                        <constraint firstItem="a8F-RR-2k6" firstAttribute="leading" secondItem="BUt-F7-EhV" secondAttribute="leadingMargin" id="nsM-sq-cG7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="flipLabel" destination="a8F-RR-2k6" id="gJ8-W1-4oV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oAK-TS-qZH" id="6ke-aK-MD3"/>
+                            <outlet property="delegate" destination="oAK-TS-qZH" id="39I-wR-EqG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Flights" id="WVW-T2-akv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KZQ-cc-gvo">
+                            <connections>
+                                <action selector="newFlightTapped:" destination="oAK-TS-qZH" id="4sw-rE-7Sa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="editFlightSegue" id="u5k-iH-3I6"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GCU-sn-QEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253" y="619"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O2t-6A-idd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IxL-P5-Hnb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8lC-ak-7MO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oAK-TS-qZH" kind="relationship" relationship="rootViewController" id="cNQ-Qx-0n4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nd1-kB-QVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-499" y="619"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="economySeatAvailable" width="126" height="208"/>
+        <image name="economySeatTaken" width="126" height="208"/>
+        <image name="firstClassAvailable1" width="261" height="217"/>
+        <image name="firstClassTaken2" width="261" height="217"/>
+        <image name="proSeatAvailable" width="126" height="208"/>
+        <image name="proSeatTaken" width="126" height="208"/>
+    </resources>
+</document>
